@@ -27,7 +27,7 @@ fun main() {
     }
 
     // Время симуляции (18 секунд)
-    val simulationTime = 18
+    val simulationTime = 10
     val timeStep = 1.0 // шаг времени 1 секунда
 
     println("=== НАЧАЛО СИМУЛЯЦИИ ===")
