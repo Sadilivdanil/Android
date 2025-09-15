@@ -26,7 +26,7 @@ fun main() {
         humans.add(Human("Человек ${index + 1}: $randomName", randomAge, randomSpeed))
     }
 
-    // Время симуляции (18 секунд)
+    // Время симуляции (10 секунд)
     val simulationTime = 10
     val timeStep = 1.0 // шаг времени 1 секунда
 
