@@ -4,8 +4,8 @@ import kotlin.random.Random
 
 fun main() {
     // Первая симуляция
-    println("=== ПЕРВОЕ ЗАДАНИЕ: СИМУЛЯЦИЯ ДВИЖЕНИЯ ===")
-
+    println("симуляция движения")
+//создание списка
     val humans = mutableListOf<Human>()
     val names = listOf("Иванов", "Петров", "Сидоров", "Кузнецов", "Смирнов", "Попов", "Васильев")
 
@@ -16,8 +16,8 @@ fun main() {
         humans.add(Human("Человек ${index + 1}: $randomName", randomAge, randomSpeed))
     }
 
-    val simulationTime = 10
-    println("Участников: ${humans.size}, Время: ${simulationTime}сек")
+    val simTime = 10
+    println("Участников: ${humans.size}, Время: ${simTime}сек")
     println("=".repeat(50))
 
     for (second in 1..simulationTime) {
@@ -34,8 +34,8 @@ fun main() {
 
     println("\n" + "=".repeat(60) + "\n")
 
-    // Вторая симуляция
-    println("=== ВТОРОЕ ЗАДАНИЕ: НАСЛЕДОВАНИЕ И ПОТОКИ ===")
+    // наследование
+    println("наследование")
 
     val human1 = Human("Иван", 25, 1.0)
     val human2 = Human("Петр", 30, 1.5)
@@ -45,6 +45,7 @@ fun main() {
     val entities = listOf(human1, human2, human3, driver)
 
     println("Запуск параллельного движения...")
+    //создание отдельных потоков
     val threads = entities.map { entity ->
         thread {
             repeat(5) {
@@ -56,10 +57,10 @@ fun main() {
             }
         }
     }
-
+//ожидание завкршения всех потоков
     threads.forEach { it.join() }
 
-    println("\n=== ФИНАЛЬНЫЕ ПОЗИЦИИ ===")
+    println("\nпоследние позиции")
     entities.forEach {
         val type = if (it is Driver) "Водитель" else "Человек"
         val name = if (it is Human) it.getFullName() else (it as Driver).name
