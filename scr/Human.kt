@@ -10,7 +10,7 @@ fun main() {
     ) {
         private var x: Double = 0.0
         private var y: Double = 0.0
-
+//методы для получения информации геттеры
         fun getFullName(): String = fullName
         fun getAge(): Int = age
         fun getCurrentSpeed(): Double = currentSpeed
@@ -26,7 +26,7 @@ fun main() {
         }
     }
 
-    println("=== ПЕРВОЕ ЗАДАНИЕ: СИМУЛЯЦИЯ ДВИЖЕНИЯ ===")
+    println(" симуляция движения ")
 
     // Создаем 18 человек (по номеру в списке)
     val humans = mutableListOf<Human>()
@@ -41,7 +41,7 @@ fun main() {
 
     // Симуляция на 10 секунд
     val simulationTime = 10
-    println("Участников: ${humans.size}, Время: ${simulationTime}сек")
+    println("Участников: ${humans.size}, Время: ${simTime}сек")
     println("=".repeat(50))
 
     for (second in 1..simulationTime) {
@@ -50,9 +50,10 @@ fun main() {
         Thread.sleep(500)
     }
 
-    println("\n=== РЕЗУЛЬТАТЫ ПЕРВОГО ЗАДАНИЯ ===")
+    println("\n результаты ")
     humans.forEachIndexed { index, human ->
         val pos = human.getPosition()
         println("${index + 1}. ${human.getFullName()} - (${"%.2f".format(pos.first)}, ${"%.2f".format(pos.second)})")
     }
+
 }
