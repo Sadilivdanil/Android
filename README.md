@@ -23,6 +23,18 @@ class Driver(
 более тонко управлять процессом инициализации, особенно полезны, если
 нужно выполнить конкретные действия перед созданием объекта.
 
+```
+    open class Human(val name: String, val speed: Double) {
+        var x: Double = 0.0
+        var y: Double = 0.0
+
+        // вторичный конструктор 
+        constructor(name: String) : this(name, 1.0) {
+            println("Создан человек $name со стандартной скоростью 1.0")
+        }
+```
+
+
 
 
 
